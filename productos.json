@@ -1,0 +1,442 @@
+[
+    {
+        "model": "catalogo.producto",
+        "pk": 1,
+        "fields": {
+            "nombre": "Martillo carpintero 16 oz mango de fibra",
+            "categoria": "Herramientas manuales",
+            "precio": 7990,
+            "stock": 25,
+            "imagen": "https://images.pexels.com/photos/7484795/pexels-photo-7484795.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 2,
+        "fields": {
+            "nombre": "Set de 3 destornilladores paleta y cruz",
+            "categoria": "Herramientas manuales",
+            "precio": 6990,
+            "stock": 18,
+            "imagen": "https://images.pexels.com/photos/5583091/pexels-photo-5583091.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 3,
+        "fields": {
+            "nombre": "Alicate universal 8 pulgadas",
+            "categoria": "Herramientas manuales",
+            "precio": 8990,
+            "stock": 20,
+            "imagen": "https://images.pexels.com/photos/5583102/pexels-photo-5583102.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 4,
+        "fields": {
+            "nombre": "Juego de llaves combinadas 12 piezas",
+            "categoria": "Herramientas manuales",
+            "precio": 19990,
+            "stock": 12,
+            "imagen": "https://images.pexels.com/photos/6789021/pexels-photo-6789021.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 5,
+        "fields": {
+            "nombre": "Huincha de medir 5 metros",
+            "categoria": "Herramientas manuales",
+            "precio": 4990,
+            "stock": 35,
+            "imagen": "https://images.pexels.com/photos/3143082/pexels-photo-3143082.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 6,
+        "fields": {
+            "nombre": "Taladro percutor inalámbrico 18V con batería",
+            "categoria": "Herramientas eléctricas",
+            "precio": 59990,
+            "stock": 8,
+            "imagen": "https://images.pexels.com/photos/3877525/pexels-photo-3877525.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 7,
+        "fields": {
+            "nombre": "Atornillador inalámbrico 12V",
+            "categoria": "Herramientas eléctricas",
+            "precio": 34990,
+            "stock": 14,
+            "imagen": "https://images.pexels.com/photos/8811530/pexels-photo-8811530.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 8,
+        "fields": {
+            "nombre": "Esmeril angular 4 1/2 pulgadas 850W",
+            "categoria": "Herramientas eléctricas",
+            "precio": 39990,
+            "stock": 10,
+            "imagen": "https://images.pexels.com/photos/32298302/pexels-photo-32298302.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 9,
+        "fields": {
+            "nombre": "Disco de sierra circular 7 1/4 pulgadas 24 dientes",
+            "categoria": "Herramientas eléctricas",
+            "precio": 12990,
+            "stock": 0,
+            "imagen": "https://images.pexels.com/photos/7492589/pexels-photo-7492589.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 10,
+        "fields": {
+            "nombre": "Set de 32 puntas para atornillador",
+            "categoria": "Herramientas eléctricas",
+            "precio": 9990,
+            "stock": 22,
+            "imagen": "https://images.pexels.com/photos/5691656/pexels-photo-5691656.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 11,
+        "fields": {
+            "nombre": "Tornillo para madera 8x1 1/2 pulgada caja 100 unidades",
+            "categoria": "Fijaciones",
+            "precio": 3990,
+            "stock": 45,
+            "imagen": "https://images.pexels.com/photos/5583084/pexels-photo-5583084.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 12,
+        "fields": {
+            "nombre": "Clavo corriente 2 1/2 pulgadas 1 kg",
+            "categoria": "Fijaciones",
+            "precio": 2990,
+            "stock": 40,
+            "imagen": "https://images.pexels.com/photos/36398239/pexels-photo-36398239.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 13,
+        "fields": {
+            "nombre": "Perno hexagonal 3/8 x 2 pulgadas bolsa 10 unidades",
+            "categoria": "Fijaciones",
+            "precio": 3490,
+            "stock": 30,
+            "imagen": "https://images.pexels.com/photos/30496227/pexels-photo-30496227.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 14,
+        "fields": {
+            "nombre": "Surtido de pernos y tuercas 150 piezas",
+            "categoria": "Fijaciones",
+            "precio": 8990,
+            "stock": 15,
+            "imagen": "https://images.pexels.com/photos/21050460/pexels-photo-21050460.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 15,
+        "fields": {
+            "nombre": "Tornillo autorroscante 10x3/4 caja 100 unidades",
+            "categoria": "Fijaciones",
+            "precio": 3990,
+            "stock": 50,
+            "imagen": "https://images.pexels.com/photos/29751916/pexels-photo-29751916.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 16,
+        "fields": {
+            "nombre": "Esmalte al agua satinado 1 galón",
+            "categoria": "Pinturas",
+            "precio": 24990,
+            "stock": 16,
+            "imagen": "https://images.pexels.com/photos/6920160/pexels-photo-6920160.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 17,
+        "fields": {
+            "nombre": "Látex interior blanco 4 galones",
+            "categoria": "Pinturas",
+            "precio": 39990,
+            "stock": 11,
+            "imagen": "https://images.pexels.com/photos/5691684/pexels-photo-5691684.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 18,
+        "fields": {
+            "nombre": "Pintura en spray multiuso 400 ml",
+            "categoria": "Pinturas",
+            "precio": 4990,
+            "stock": 28,
+            "imagen": "https://images.pexels.com/photos/6068901/pexels-photo-6068901.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 19,
+        "fields": {
+            "nombre": "Rodillo antigota 9 pulgadas",
+            "categoria": "Pinturas",
+            "precio": 5990,
+            "stock": 32,
+            "imagen": "https://images.pexels.com/photos/5853925/pexels-photo-5853925.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 20,
+        "fields": {
+            "nombre": "Set de 3 brochas cerda natural",
+            "categoria": "Pinturas",
+            "precio": 6990,
+            "stock": 24,
+            "imagen": "https://images.pexels.com/photos/5799086/pexels-photo-5799086.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 21,
+        "fields": {
+            "nombre": "Ampolleta LED 9W luz cálida E27",
+            "categoria": "Electricidad",
+            "precio": 1990,
+            "stock": 48,
+            "imagen": "https://images.pexels.com/photos/3946250/pexels-photo-3946250.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 22,
+        "fields": {
+            "nombre": "Enchufe doble con tierra 10A",
+            "categoria": "Electricidad",
+            "precio": 3990,
+            "stock": 35,
+            "imagen": "https://images.pexels.com/photos/3615719/pexels-photo-3615719.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 23,
+        "fields": {
+            "nombre": "Zapatilla eléctrica 4 tomas con 2 puertos USB",
+            "categoria": "Electricidad",
+            "precio": 9990,
+            "stock": 20,
+            "imagen": "https://images.pexels.com/photos/39234197/pexels-photo-39234197.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 24,
+        "fields": {
+            "nombre": "Extensión eléctrica naranja 10 metros",
+            "categoria": "Electricidad",
+            "precio": 12990,
+            "stock": 18,
+            "imagen": "https://images.pexels.com/photos/8832030/pexels-photo-8832030.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 25,
+        "fields": {
+            "nombre": "Módulo enchufe e interruptor para muro",
+            "categoria": "Electricidad",
+            "precio": 4990,
+            "stock": 27,
+            "imagen": "https://images.pexels.com/photos/36738243/pexels-photo-36738243.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 26,
+        "fields": {
+            "nombre": "Llave stilson 14 pulgadas",
+            "categoria": "Gasfitería",
+            "precio": 14990,
+            "stock": 14,
+            "imagen": "https://images.pexels.com/photos/8488060/pexels-photo-8488060.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 27,
+        "fields": {
+            "nombre": "Grifería monomando para lavamanos",
+            "categoria": "Gasfitería",
+            "precio": 29990,
+            "stock": 9,
+            "imagen": "https://images.pexels.com/photos/30560253/pexels-photo-30560253.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 28,
+        "fields": {
+            "nombre": "Llave de jardín con manilla 1/2 pulgada",
+            "categoria": "Gasfitería",
+            "precio": 4990,
+            "stock": 30,
+            "imagen": "https://images.pexels.com/photos/3616761/pexels-photo-3616761.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 29,
+        "fields": {
+            "nombre": "Tubo PVC hidráulico 20 mm x 6 metros",
+            "categoria": "Gasfitería",
+            "precio": 6990,
+            "stock": 25,
+            "imagen": "https://images.pexels.com/photos/29301874/pexels-photo-29301874.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 30,
+        "fields": {
+            "nombre": "Llave mezcladora para lavaplatos",
+            "categoria": "Gasfitería",
+            "precio": 24990,
+            "stock": 12,
+            "imagen": "https://images.pexels.com/photos/12040632/pexels-photo-12040632.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 31,
+        "fields": {
+            "nombre": "Cemento especial saco 25 kg",
+            "categoria": "Construcción",
+            "precio": 4990,
+            "stock": 45,
+            "imagen": "https://images.pexels.com/photos/29519165/pexels-photo-29519165.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 32,
+        "fields": {
+            "nombre": "Carretilla 90 litros rueda neumática",
+            "categoria": "Construcción",
+            "precio": 49990,
+            "stock": 7,
+            "imagen": "https://images.pexels.com/photos/27731992/pexels-photo-27731992.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 33,
+        "fields": {
+            "nombre": "Nivel de burbuja aluminio 60 cm",
+            "categoria": "Construcción",
+            "precio": 7990,
+            "stock": 19,
+            "imagen": "https://images.pexels.com/photos/6251067/pexels-photo-6251067.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 34,
+        "fields": {
+            "nombre": "Casco de seguridad con arnés",
+            "categoria": "Construcción",
+            "precio": 5990,
+            "stock": 26,
+            "imagen": "https://images.pexels.com/photos/34965713/pexels-photo-34965713.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 35,
+        "fields": {
+            "nombre": "Guantes de trabajo multiuso par",
+            "categoria": "Construcción",
+            "precio": 2990,
+            "stock": 0,
+            "imagen": "https://images.pexels.com/photos/8488007/pexels-photo-8488007.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 36,
+        "fields": {
+            "nombre": "Manguera de jardín 15 metros",
+            "categoria": "Jardín",
+            "precio": 13990,
+            "stock": 16,
+            "imagen": "https://images.pexels.com/photos/13472779/pexels-photo-13472779.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 37,
+        "fields": {
+            "nombre": "Tijera de podar bypass",
+            "categoria": "Jardín",
+            "precio": 7990,
+            "stock": 21,
+            "imagen": "https://images.pexels.com/photos/6662500/pexels-photo-6662500.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 38,
+        "fields": {
+            "nombre": "Pala punta huevo mango de madera",
+            "categoria": "Jardín",
+            "precio": 10990,
+            "stock": 15,
+            "imagen": "https://images.pexels.com/photos/26925731/pexels-photo-26925731.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 39,
+        "fields": {
+            "nombre": "Regadera metálica 10 litros",
+            "categoria": "Jardín",
+            "precio": 12990,
+            "stock": 11,
+            "imagen": "https://images.pexels.com/photos/4622067/pexels-photo-4622067.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    },
+    {
+        "model": "catalogo.producto",
+        "pk": 40,
+        "fields": {
+            "nombre": "Set de herramientas de mano para jardín 3 piezas",
+            "categoria": "Jardín",
+            "precio": 8990,
+            "stock": 17,
+            "imagen": "https://images.pexels.com/photos/18566999/pexels-photo-18566999.jpeg?auto=compress&cs=tinysrgb&w=600"
+        }
+    }
+]

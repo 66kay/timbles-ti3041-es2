@@ -1,0 +1,234 @@
+/* ===== Ferretería El Roble ===== */
+:root {
+    --acero: #1D3A5F;        /* azul acero: marca y cabecera */
+    --acero-oscuro: #132840;
+    --tinta: #16202B;        /* texto principal */
+    --gris: #5A6675;         /* texto secundario */
+    --galvanizado: #EEF1F4;  /* fondo general */
+    --linea: #D7DDE4;
+    --blanco: #FFFFFF;
+    --amarillo: #FFC529;     /* acento: botones principales */
+    --amarillo-oscuro: #E5AC0C;
+    --verde: #1F7A4D;
+    --rojo: #B42318;
+    --whatsapp: #1E9E55;
+
+    --titulos: "Archivo", "Arial Narrow", Arial, sans-serif;
+    --texto: "Public Sans", "Segoe UI", Arial, sans-serif;
+    --radio: 6px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+body {
+    font-family: var(--texto);
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--tinta);
+    background: var(--galvanizado);
+    -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.contenedor { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+
+.oculto {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+:focus-visible { outline: 3px solid var(--amarillo); outline-offset: 2px; }
+
+/* ===== Botones ===== */
+.boton {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: var(--titulos); font-weight: 700; font-size: .95rem;
+    text-decoration: none; border-radius: var(--radio);
+    padding: 12px 20px; border: 2px solid transparent; cursor: pointer;
+    transition: background-color .15s, border-color .15s, color .15s;
+}
+.boton svg { width: 18px; height: 18px; }
+.boton--principal { background: var(--amarillo); color: var(--tinta); }
+.boton--principal:hover { background: var(--amarillo-oscuro); }
+.boton--linea { border-color: rgba(255,255,255,.45); color: var(--blanco); }
+.boton--linea:hover { border-color: var(--blanco); }
+.boton--whatsapp { background: var(--whatsapp); color: var(--blanco); padding: 10px 16px; }
+.boton--whatsapp:hover { background: #17834A; }
+
+/* ===== Barra de aviso ===== */
+.aviso { background: var(--acero-oscuro); color: #C9D4E0; font-size: .82rem; }
+.aviso__fila { display: flex; justify-content: space-between; gap: 12px; padding-top: 7px; padding-bottom: 7px; }
+
+/* ===== Cabecera ===== */
+.cabecera { background: var(--acero); color: var(--blanco); position: sticky; top: 0; z-index: 10; }
+.cabecera__fila { display: flex; align-items: center; gap: 24px; min-height: 76px; }
+
+.marca { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--acero-oscuro); flex-shrink: 0; }
+.marca__icono { width: 42px; height: 42px; }
+.marca__texto {
+    display: flex; flex-direction: column; color: var(--blanco);
+    font-family: var(--titulos); font-weight: 800; font-size: 1.45rem;
+    font-stretch: 80%; line-height: 1;
+}
+.marca__texto small { font-family: var(--texto); font-weight: 500; font-size: .72rem; font-stretch: 100%; color: #AFC0D3; margin-top: 4px; }
+
+.buscador { flex: 1; display: flex; max-width: 560px; margin-left: auto; }
+.buscador input {
+    flex: 1; min-width: 0; font: inherit; font-size: .95rem;
+    padding: 11px 14px; border: 0; border-radius: var(--radio) 0 0 var(--radio);
+    background: var(--blanco); color: var(--tinta);
+}
+.buscador button {
+    font-family: var(--titulos); font-weight: 700; font-size: .95rem;
+    padding: 0 18px; border: 0; cursor: pointer;
+    background: var(--amarillo); color: var(--tinta);
+    border-radius: 0 var(--radio) var(--radio) 0;
+}
+.buscador button:hover { background: var(--amarillo-oscuro); }
+
+/* ===== Portada ===== */
+.portada { background: var(--acero); color: var(--blanco); overflow: hidden; }
+.portada__fila {
+    display: grid; grid-template-columns: 1.05fr 1fr; align-items: center; gap: 48px;
+    padding-top: 56px; padding-bottom: 56px;
+}
+.portada h1 {
+    font-family: var(--titulos); font-weight: 800; font-stretch: 78%;
+    font-size: clamp(2.3rem, 5.4vw, 4.2rem); line-height: .98; letter-spacing: -.01em;
+    max-width: 14ch;
+}
+.portada__texto { min-width: 0; }
+.portada__texto > p { color: #C9D4E0; font-size: 1.08rem; max-width: 46ch; margin-top: 20px; }
+.portada__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+.portada__foto { position: relative; }
+.portada__foto img {
+    width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+    border-radius: var(--radio);
+    box-shadow: 14px 14px 0 var(--amarillo);
+    animation: entrada .7s ease-out both;
+}
+@keyframes entrada {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: none; }
+}
+
+/* ===== Beneficios ===== */
+.beneficios { background: var(--blanco); border-bottom: 1px solid var(--linea); }
+.beneficios__fila { display: grid; grid-template-columns: repeat(3, 1fr); }
+.beneficio { padding: 20px 24px 20px 0; display: flex; flex-direction: column; }
+.beneficio + .beneficio { border-left: 1px solid var(--linea); padding-left: 24px; }
+.beneficio strong { font-family: var(--titulos); font-size: 1.05rem; }
+.beneficio span { color: var(--gris); font-size: .9rem; }
+
+/* ===== Catálogo ===== */
+.catalogo { display: grid; grid-template-columns: 230px 1fr; gap: 36px; padding-top: 44px; padding-bottom: 72px; scroll-margin-top: 80px; }
+
+.catalogo > * { min-width: 0; }
+.catalogo__lateral { position: sticky; top: 100px; align-self: start; }
+.lateral__titulo { font-family: var(--titulos); font-size: 1.1rem; margin-bottom: 10px; }
+.categorias { display: flex; flex-direction: column; border-left: 2px solid var(--linea); }
+.categoria {
+    text-decoration: none; color: var(--gris); font-size: .95rem;
+    padding: 7px 0 7px 14px; margin-left: -2px; border-left: 2px solid transparent;
+}
+.categoria:hover { color: var(--tinta); }
+.categoria--activa { color: var(--acero); font-weight: 600; border-left-color: var(--amarillo); }
+
+.catalogo__cabecera { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 20px; }
+.catalogo__cabecera h2 { font-family: var(--titulos); font-weight: 800; font-stretch: 85%; font-size: 1.9rem; line-height: 1.1; }
+.catalogo__cabecera p { color: var(--gris); font-size: .92rem; white-space: nowrap; }
+
+.grilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+
+/* ===== Tarjeta de producto ===== */
+.producto {
+    background: var(--blanco); border: 1px solid var(--linea); border-radius: var(--radio);
+    overflow: hidden; display: flex; flex-direction: column;
+}
+.producto__foto { position: relative; aspect-ratio: 4 / 3; background: #DDE3EA; }
+.producto__foto img { width: 100%; height: 100%; object-fit: cover; }
+.producto__sinfoto { display: grid; place-items: center; height: 100%; color: var(--gris); font-size: .9rem; }
+
+.etiqueta {
+    position: absolute; top: 10px; left: 10px;
+    font-size: .76rem; font-weight: 600; padding: 3px 9px; border-radius: 4px;
+}
+.etiqueta--bajo { background: var(--amarillo); color: var(--tinta); }
+.etiqueta--agotado { background: var(--tinta); color: var(--blanco); }
+
+.producto__datos { padding: 16px 16px 18px; display: flex; flex-direction: column; flex: 1; }
+.producto__categoria { font-size: .8rem; color: var(--gris); }
+.producto__nombre { font-size: 1rem; font-weight: 600; line-height: 1.35; margin-top: 2px; flex: 1; }
+.producto__precio { font-family: var(--titulos); font-weight: 800; font-size: 1.6rem; margin-top: 12px; line-height: 1.1; }
+.producto__stock { font-size: .85rem; color: var(--verde); margin-top: 2px; }
+
+.boton--cotizar { margin-top: 14px; background: var(--acero); color: var(--blanco); font-size: .9rem; padding: 10px 14px; }
+.boton--cotizar:hover { background: var(--acero-oscuro); }
+.boton--avisar { margin-top: 14px; border-color: var(--linea); color: var(--tinta); font-size: .9rem; padding: 10px 14px; }
+.boton--avisar:hover { border-color: var(--tinta); }
+
+.producto--agotado .producto__foto img { filter: grayscale(1); opacity: .7; }
+.producto--agotado .producto__stock { color: var(--rojo); }
+
+.vacio {
+    grid-column: 1 / -1; background: var(--blanco); border: 1px dashed var(--linea);
+    border-radius: var(--radio); padding: 40px; text-align: center;
+}
+.vacio p { margin-bottom: 16px; color: var(--gris); }
+
+/* ===== Pie ===== */
+.pie { background: var(--acero-oscuro); color: #B9C6D4; font-size: .92rem; padding-top: 48px; }
+.pie a { color: #DCE4EC; }
+.pie__fila { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 32px; }
+.pie__nombre { font-family: var(--titulos); font-weight: 800; font-size: 1.3rem; color: var(--blanco); margin-bottom: 6px; }
+.pie__marca p:last-child { max-width: 32ch; }
+.pie__titulo { color: var(--blanco); font-weight: 600; margin-bottom: 6px; }
+.pie__legal {
+    display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,.12); margin-top: 40px;
+    padding-top: 18px; padding-bottom: 24px; font-size: .8rem; color: #8FA0B3;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 960px) {
+    .portada__fila { grid-template-columns: 1fr; gap: 36px; }
+    .portada__foto { margin-right: 10px; }
+    .portada__foto img { box-shadow: 10px 10px 0 var(--amarillo); }
+    .catalogo { grid-template-columns: 1fr; gap: 20px; }
+    .catalogo__lateral { position: static; }
+    .categorias { flex-direction: row; overflow-x: auto; border-left: 0; gap: 8px; padding-bottom: 4px; }
+    .categoria {
+        white-space: nowrap; margin-left: 0; border: 1px solid var(--linea);
+        border-radius: 999px; padding: 7px 14px; background: var(--blanco);
+    }
+    .categoria--activa { background: var(--acero); color: var(--blanco); border-color: var(--acero); }
+    .pie__fila { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 720px) {
+    .aviso__horario { display: none; }
+    .cabecera__fila { flex-wrap: wrap; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+    .buscador { order: 3; flex: 0 0 100%; max-width: 100%; margin-left: 0; }
+    .boton--cotizar, .boton--avisar { font-size: .82rem; padding: 9px 8px; }
+    .boton--whatsapp { margin-left: auto; }
+    .beneficios__fila { grid-template-columns: 1fr; }
+    .beneficio, .beneficio + .beneficio { border-left: 0; padding: 14px 0; }
+    .beneficio + .beneficio { border-top: 1px solid var(--linea); }
+    .catalogo__cabecera { flex-direction: column; gap: 2px; }
+    .grilla { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .producto__datos { padding: 12px; }
+    .producto__precio { font-size: 1.3rem; }
+    .pie__fila { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 359px) {
+    .grilla { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}

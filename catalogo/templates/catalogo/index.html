@@ -1,0 +1,100 @@
+{% extends "catalogo/base.html" %}
+
+{% block contenido %}
+<section class="portada">
+    <div class="contenedor portada__fila">
+        <div class="portada__texto">
+            <h1>Lo que necesitas para la obra, en un solo mostrador.</h1>
+            <p>Herramientas, materiales y repuestos con precio y stock al día. Revisa antes de venir o cotiza por WhatsApp.</p>
+            <div class="portada__acciones">
+                <a href="#catalogo" class="boton boton--principal">Ver catálogo</a>
+                <a href="https://wa.me/56900000000" class="boton boton--linea" target="_blank" rel="noopener">Hablar con un vendedor</a>
+            </div>
+        </div>
+        <figure class="portada__foto">
+            <img src="https://images.pexels.com/photos/4312854/pexels-photo-4312854.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                 alt="Serruchos, niveles y huincha de medir sobre un mesón de trabajo" width="1200" height="800">
+        </figure>
+    </div>
+</section>
+
+<section class="beneficios" aria-label="Servicios de la tienda">
+    <div class="contenedor beneficios__fila">
+        <div class="beneficio">
+            <strong>Retiro en tienda</strong>
+            <span>Cotiza y pasa a buscar el mismo día</span>
+        </div>
+        <div class="beneficio">
+            <strong>Despacho en la ciudad</strong>
+            <span>Materiales pesados directo a tu obra</span>
+        </div>
+        <div class="beneficio">
+            <strong>Asesoría de maestro</strong>
+            <span>Te ayudamos a elegir lo que sirve</span>
+        </div>
+    </div>
+</section>
+
+<section class="catalogo contenedor" id="catalogo">
+    <aside class="catalogo__lateral">
+        <h2 class="lateral__titulo">Categorías</h2>
+        <nav class="categorias" aria-label="Filtrar por categoría">
+            <a href="{% url 'inicio' %}#catalogo" class="categoria {% if not categoria_actual %}categoria--activa{% endif %}">Todo el catálogo</a>
+            {% for cat in categorias %}
+                <a href="?categoria={{ cat|urlencode }}#catalogo" class="categoria {% if cat == categoria_actual %}categoria--activa{% endif %}">{{ cat }}</a>
+            {% endfor %}
+        </nav>
+    </aside>
+
+    <div class="catalogo__contenido">
+        <div class="catalogo__cabecera">
+            <h2>
+                {% if busqueda %}Resultados para “{{ busqueda }}”
+                {% elif categoria_actual %}{{ categoria_actual }}
+                {% else %}Todo el catálogo{% endif %}
+            </h2>
+            <p>{{ productos|length }} producto{{ productos|length|pluralize }}</p>
+        </div>
+
+        <div class="grilla">
+            {% for producto in productos %}
+                <article class="producto {% if producto.stock == 0 %}producto--agotado{% endif %}">
+                    <div class="producto__foto">
+                        {% if producto.imagen %}
+                            <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" loading="lazy" width="600" height="450">
+                        {% else %}
+                            <span class="producto__sinfoto">Sin foto</span>
+                        {% endif %}
+                        {% if producto.stock == 0 %}
+                            <span class="etiqueta etiqueta--agotado">Agotado</span>
+                        {% elif producto.stock <= 5 %}
+                            <span class="etiqueta etiqueta--bajo">Últimas {{ producto.stock }}</span>
+                        {% endif %}
+                    </div>
+                    <div class="producto__datos">
+                        <p class="producto__categoria">{{ producto.categoria }}</p>
+                        <h3 class="producto__nombre">{{ producto.nombre }}</h3>
+                        <p class="producto__precio">{{ producto.precio_clp }}</p>
+                        <p class="producto__stock">
+                            {% if producto.stock == 0 %}Sin stock por ahora
+                            {% else %}{{ producto.stock }} disponible{{ producto.stock|pluralize }} en tienda{% endif %}
+                        </p>
+                        {% if producto.stock > 0 %}
+                            <a class="boton boton--cotizar" target="_blank" rel="noopener"
+                               href="https://wa.me/56900000000?text={{ 'Hola, quiero cotizar: '|urlencode }}{{ producto.nombre|urlencode }}">Cotizar por WhatsApp</a>
+                        {% else %}
+                            <a class="boton boton--avisar" target="_blank" rel="noopener"
+                               href="https://wa.me/56900000000?text={{ 'Hola, avísenme cuando llegue: '|urlencode }}{{ producto.nombre|urlencode }}">Avisarme cuando llegue</a>
+                        {% endif %}
+                    </div>
+                </article>
+            {% empty %}
+                <div class="vacio">
+                    <p>No encontramos productos con esa búsqueda.</p>
+                    <a href="{% url 'inicio' %}#catalogo" class="boton boton--principal">Ver todo el catálogo</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
